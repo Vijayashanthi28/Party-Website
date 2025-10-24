@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Events & Supplliers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body>
+     <header class="top-navbar">
+        <a href="" class="company-logo" id="logoLink">
+            <img class="logo-svg" src="images/nav logo.png">
+        </a>
+
+        <button class="mobile-toggle" id="mobileMenuToggle">☰</button>
+
+        <nav>
+            <ul class="menu-list" id="navigationMenu">
+                <li class="menu-option">
+                    <a href="index.html" class="menu-anchor">Home</a>
+                </li>
+                <li class="menu-option">
+                    <a href="venue.html" class="menu-anchor">Venue</a>
+                </li>
+                <li class="menu-option">
+                    <a href="supplier.html" class="menu-anchor">Suppliers</a>
+                </li>
+                <li class="menu-option">
+                    <a href="media.html" class="menu-anchor">Media</a>
+                </li>
+                <li class="menu-option">
+                    <a href="about.html" class="menu-anchor">About</a>
+                </li>
+                <li class="menu-option">
+                    <a href="contact.html" class="menu-anchor">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="auth-buttons">
+           <a href="login.html"> <button class="signin-btn" id="loginButton">Login</button></a>
+            <a href="signin.html"><button class="signup-btn" id="registerButton">Sign Up</button></a> 
+        </div>
+    </header>
+
+     <div class="indexhero-banner">
+        <h1 class="venhero-title">Our Wedding Venues</h1>
+        <div class="primary-filters">
+            <div class="dropdown-wrapper">
+                <div class="dropdown-select" data-dropdown="category">
+                    Select Category
+                </div>
+                <span class="dropdown-arrow">▼</span>
+                <div class="dropdown-menu" id="categoryMenu">
+                    <div class="dropdown-header">Select Category</div>
+                    <div class="dropdown-item" data-value="decorators">Decorators</div>
+                    <div class="dropdown-item" data-value="venue-planners">Venue Planners</div>
+                    <div class="dropdown-item" data-value="choreographers">Choreographers</div>
+                    <div class="dropdown-item" data-value="makeup-artist">Makeup Artist</div>
+                    <div class="dropdown-item" data-value="bar-services">Bar Services</div>
+                    <div class="dropdown-item" data-value="designers">Designers</div>
+                    <div class="dropdown-item" data-value="celebrant">Celebrant</div>
+                    <div class="dropdown-item" data-value="honeymoon">Honeymoon</div>
+                    <div class="dropdown-item" data-value="photographer">Photographer</div>
+                    <div class="dropdown-item" data-value="videographer">Videographer</div>
+                </div>
+            </div>
+            <div class="dropdown-wrapper">
+                <div class="dropdown-select" data-dropdown="location">
+                    Select Location
+                </div>
+                <span class="dropdown-arrow">▼</span>
+                <div class="dropdown-menu" id="locationMenu">
+                    <div class="dropdown-header">Select Location</div>
+                    <div class="dropdown-item" data-value="chennai">Chennai</div>
+                    <div class="dropdown-item" data-value="mumbai">Mumbai</div>
+                    <div class="dropdown-item" data-value="madurai">Madurai</div>
+                    <div class="dropdown-item" data-value="delhi">Delhi</div>
+                    <div class="dropdown-item" data-value="dubai">Dubai</div>
+                    <div class="dropdown-item" data-value="kanniyakumari">Kanniyakumari</div>
+                    <div class="dropdown-item" data-value="tirunelveli">Tirunelveli</div>
+                    <div class="dropdown-item" data-value="bangalore">Bangalore</div>
+                    <div class="dropdown-item" data-value="tiruvananthapuram">Tiruvananthapuram</div>
+                    <div class="dropdown-item" data-value="kochi">Kochi</div>
+                </div>
+            </div>
+            <button class="search-btn">Search</button>
+        </div>
+    </div>
+
+   
+            
+       <!-- Browse By Category Section -->
+<section class="category-browse-section" id="browse-category">
+    <div class="section-top">
+        <h2 class="section-heading">Browse By Category</h2>
+        <a href="supplier.html" class="view-all-anchor" id="browse-category-viewall">View All (10)</a>
+    </div>
+
+    <div class="categories-display" id="browse-category-container">
+        <!-- Categories will be dynamically loaded here -->
+    </div>
+
+    <div class="pagination-controls" id="browse-category-pagination">
+        <!-- Pagination will be dynamically loaded here -->
+    </div>
+</section>
+
+<!-- Popular Venue Section -->
+<section class="category-browse-section" id="popular-venue">
+    <div class="section-top">
+        <h2 class="section-heading">Popular Venue</h2>
+        <a href="venues.html" class="view-all-anchor" id="popular-venue-viewall">View All (1000)</a>
+    </div>
+
+    <div class="categories-display" id="popular-venue-container">
+        <!-- Venues will be dynamically loaded here -->
+    </div>
+
+    <div class="pagination-controls" id="popular-venue-pagination">
+        <!-- Pagination will be dynamically loaded here -->
+    </div>
+</section>
+   
+   
+ 
+   
+    <!-- Your Dreams Section -->
+    <div class="feedback-box">
+        <div class="feedback-container">
+            <img src="images/ind.png" alt="Wedding Couple"
+                class="couple-image">
+            <div class="feedback-details">
+                <h2 class="feedback-heading">Your Dreams, Our Dreams...</h2>
+                <p class="feedback-text">
+                    We love to hear from our precious users. For any feedback or queries simply write in to...
+                </p>
+                <button class="abaction-button">View</button>
+            </div>
+        </div>
+    </div>
+
+     <section class="video-gallery-section">
+        <div class="gallery-header">
+            <h2 class="gallery-title">Featured Videos</h2>
+            <a href="#" class="view-all-link">View All (50)</a>
+        </div>
+
+        <div class="videos-grid">
+            <!-- Video Item 1 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="images/vi 1.png" alt="Wedding Video">
+                    
+                    <div class="play-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                </div>
+                <div class="video-caption">
+                    <h3 class="video-name">Wedding Viedo</h3>
+                </div>
+            </div>
+
+            <!-- Video Item 2 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="images/vi 2.png" alt="Wedding Video">
+                    <div class="play-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                </div>
+                <div class="video-caption">
+                    <h3 class="video-name">Viedo</h3>
+                </div>
+            </div>
+
+            <!-- Video Item 3 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="images/vi 3.png" alt="Wedding Video">
+                    <div class="play-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                </div>
+                <div class="video-caption">
+                    <h3 class="video-name">Viedo</h3>
+                </div>
+            </div>
+
+            <!-- Video Item 4 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="images/vi 4.png" alt="Wedding Video">
+                    <div class="play-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                </div>
+                <div class="video-caption">
+                    <h3 class="video-name">Viedo</h3>
+                </div>
+            </div>
+
+            <!-- Video Item 5 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="images/vi 5.png" alt="Wedding Video">
+                    <div class="play-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                </div>
+                <div class="video-caption">
+                    <h3 class="video-name">afgg</h3>
+                </div>
+            </div>
+
+            <!-- Video Item 6 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="images/vi 6.png" alt="Save the Date">
+                    <div class="play-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                </div>
+                <div class="video-caption">
+                    <h3 class="video-name">ghhhj</h3>
+                </div>
+            </div>
+
+            <!-- Video Item 7 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="images/venue hero.png" alt="Wedding Video">
+                    <div class="play-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                </div>
+                <div class="video-caption">
+                    <h3 class="video-name">jjjikk</h3>
+                </div>
+            </div>
+
+            <!-- Video Item 8 -->
+            <div class="video-item">
+                <div class="video-thumbnail">
+                    <img src="images/vi 8.png" alt="Wedding Video">
+                    <div class="play-overlay">
+                        <div class="play-icon"></div>
+                    </div>
+                </div>
+                <div class="video-caption">
+                    <h3 class="video-name">jjikk</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+     <section class="testimonials-section">
+        <h2 class="section-heading">Reviews</h2>
+        
+        <div class="carousel-wrapper">
+            <button class="navigation-btn prev-btn" id="prevButton" aria-label="Previous review">
+                &#8249;
+            </button>
+
+            <div class="reviews-container" id="reviewsContainer">
+                <!-- Reviews will be dynamically inserted here -->
+            </div>
+
+            <button class="navigation-btn next-btn" id="nextButton" aria-label="Next review">
+                &#8250;
+            </button>
+        </div>
+
+        <div class="carousel-indicators" id="carouselDots">
+            <!-- Dots will be dynamically inserted here -->
+        </div>
+    </section>
+
+
+     <footer class="footer-wrapper">
+        <div class="footer-container">
+            <!-- Brand & Social Media Section -->
+            <div class="footer-column brand-section">
+                <a href="#" class="footer-logo-link">
+                    <svg class="footer-logo-svg" viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- "One" text -->
+                        <text x="10" y="45" font-family="cursive, Arial" font-size="36" font-style="italic" font-weight="300" fill="url(#footerGradient)">One</text>
+                        
+                        <!-- "Event" text -->
+                        <text x="10" y="80" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#000">Event</text>
+                        
+                        <!-- Decorative circles -->
+                        <circle cx="20" cy="15" r="12" fill="none" stroke="url(#footerGradient)" stroke-width="2" opacity="0.7"/>
+                        <circle cx="32" cy="20" r="8" fill="none" stroke="#e91e63" stroke-width="1.5" opacity="0.5"/>
+                    </svg>
+                </a>
+
+                <div class="social-media-block">
+                    <h3 class="social-heading">Social Media</h3>
+                    <div class="social-icons-row">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Venues Column -->
+            <div class="footer-column">
+                <h3 class="column-title">Venues</h3>
+                <ul class="footer-links-list">
+                    <li><a href="#" class="footer-link-item">Chennai</a></li>
+                    <li><a href="#" class="footer-link-item">Mumbai</a></li>
+                    <li><a href="#" class="footer-link-item">Dubai</a></li>
+                    <li><a href="#" class="footer-link-item">Delhi</a></li>
+                    <li><a href="#" class="footer-link-item">Madurai</a></li>
+                    <li><a href="#" class="footer-link-item">Kanniyakumari</a></li>
+                </ul>
+            </div>
+
+            <!-- Suppliers Column -->
+            <div class="footer-column">
+                <h3 class="column-title">Suppliers</h3>
+                <ul class="footer-links-list">
+                    <li><a href="#" class="footer-link-item">Photographers</a></li>
+                    <li><a href="#" class="footer-link-item">Decorators</a></li>
+                    <li><a href="#" class="footer-link-item">Venues Planner</a></li>
+                    <li><a href="#" class="footer-link-item">Choreographers</a></li>
+                    <li><a href="#" class="footer-link-item">Designers</a></li>
+                    <li><a href="#" class="footer-link-item">Makeup Artists</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-column">
+                <h3 class="column-title">Quick Links</h3>
+                <ul class="footer-links-list">
+                    <li><a href="#" class="footer-link-item">About Us</a></li>
+                    <li><a href="#" class="footer-link-item">Careers</a></li>
+                    <li><a href="#" class="footer-link-item">Contact Us</a></li>
+                    <li><a href="#" class="footer-link-item">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-link-item">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Column -->
+            <div class="footer-column newsletter-section">
+                <h3 class="column-title">Newsletter</h3>
+                <p class="newsletter-text">Subscribe To Get Latest Media Updates</p>
+                <a href="livechat.html"><button class="livechat-button">Live Chat</button></a>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p class="credits-text">
+                Made with love by 
+                <a href="https://thecreation.design" target="_blank" class="creator-link">thecreation.design</a>
+            </p>
+        </div>
+    </footer>
+<script>
+
+
+
+     //Reviews Section
+          // Reviews data
+        const reviewsData = [
+            {
+                id: 1,
+                name: "John",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop",
+                review: "Aihole is one of the least explored architectural treasures in Karnataka, offering a wedding experience like no other amidst ancient temples and carvings."
+            },
+            {
+                id: 2,
+                name: "Celin",
+                image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+                review: "Aihole is one of the least explored architectural treasures in Karnataka, offering a wedding experience like no other amidst ancient temples and carvings."
+            },
+            {
+                id: 3,
+                name: "Priyala",
+                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
+                review: "Aihole is one of the least explored architectural treasures in Karnataka, offering a wedding experience like no other amidst ancient temples and carvings."
+            },
+            {
+                id: 4,
+                name: "Michael",
+                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop",
+                review: "The venue was absolutely stunning! Every detail was perfect and the staff made our special day unforgettable. Highly recommended for anyone planning their dream wedding."
+            },
+            {
+                id: 5,
+                name: "Sarah",
+                image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop",
+                review: "Outstanding service and breathtaking venue! The architectural beauty combined with modern amenities made it the perfect choice for our celebration."
+            }
+        ];
+
+        let currentIndex = 0;
+
+        // Initialize carousel
+        function initializeCarousel() {
+            renderReviews();
+            createIndicators();
+            updateIndicators();
+        }
+
+        // Render reviews
+        function renderReviews() {
+            const container = document.getElementById('reviewsContainer');
+            container.innerHTML = '';
+
+            const prevIndex = getPrevIndex();
+            const nextIndex = getNextIndex();
+
+            // Create three cards: previous, current, next
+            const indices = [prevIndex, currentIndex, nextIndex];
+            const cardClasses = ['side-card', 'center-card', 'side-card'];
+
+            indices.forEach((index, position) => {
+                const review = reviewsData[index];
+                const card = createReviewCard(review, cardClasses[position]);
+                container.appendChild(card);
+            });
+
+            // Add fade-in animation
+            container.classList.add('fade-in');
+        }
+
+        // Create review card element
+        function createReviewCard(review, cardClass) {
+            const card = document.createElement('div');
+            card.className = `review-card ${cardClass}`;
+            
+            if (cardClass === 'center-card') {
+                card.innerHTML = `
+                    <img src="${review.image}" alt="${review.name}" class="reviewer-avatar">
+                    <h3 class="reviewer-name">${review.name}</h3>
+                    <p class="review-content">${review.review}</p>
+                `;
+            } else {
+                card.innerHTML = `
+                    <h3 class="reviewer-name" style="margin-top: 1rem;">${review.name}</h3>
+                    <p class="review-content">${review.review}</p>
+                `;
+            }
+            
+            return card;
+        }
+
+        // Get previous index
+        function getPrevIndex() {
+            return currentIndex === 0 ? reviewsData.length - 1 : currentIndex - 1;
+        }
+
+        // Get next index
+        function getNextIndex() {
+            return currentIndex === reviewsData.length - 1 ? 0 : currentIndex + 1;
+        }
+
+        // Navigate to previous review
+        function navigatePrev() {
+            currentIndex = getPrevIndex();
+            renderReviews();
+            updateIndicators();
+        }
+
+        // Navigate to next review
+        function navigateNext() {
+            currentIndex = getNextIndex();
+            renderReviews();
+            updateIndicators();
+        }
+
+        // Create indicator dots
+        function createIndicators() {
+            const dotsContainer = document.getElementById('carouselDots');
+            dotsContainer.innerHTML = '';
+
+            reviewsData.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'indicator-dot';
+                dot.addEventListener('click', () => navigateToIndex(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        // Update active indicator
+        function updateIndicators() {
+            const dots = document.querySelectorAll('.indicator-dot');
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Navigate to specific index
+        function navigateToIndex(index) {
+            currentIndex = index;
+            renderReviews();
+            updateIndicators();
+        }
+
+        // Event listeners
+        document.getElementById('prevButton').addEventListener('click', navigatePrev);
+        document.getElementById('nextButton').addEventListener('click', navigateNext);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                navigatePrev();
+            } else if (e.key === 'ArrowRight') {
+                navigateNext();
+            }
+        });
+
+        // Auto-play functionality (optional)
+        let autoPlayInterval;
+        
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(() => {
+                navigateNext();
+            }, 5000); // Change review every 5 seconds
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlayInterval);
+        }
+
+        // Pause auto-play on hover
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+        carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
+        carouselWrapper.addEventListener('mouseleave', startAutoPlay);
+
+        // Touch/Swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselWrapper.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carouselWrapper.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    navigateNext();
+                } else {
+                    navigatePrev();
+                }
+            }
+        }
+
+        // Initialize on page load
+        window.addEventListener('load', () => {
+            initializeCarousel();
+            startAutoPlay();
+        });
+
+        // Log current review
+        function logCurrentReview() {
+            console.log(`Current Review: ${reviewsData[currentIndex].name}`);
+        }
+
+        // Track navigation
+        let navigationCount = 0;
+        const originalNavigateNext = navigateNext;
+        const originalNavigatePrev = navigatePrev;
+
+        navigateNext = function() {
+            navigationCount++;
+            originalNavigateNext();
+            logCurrentReview();
+        };
+
+        navigatePrev = function() {
+            navigationCount++;
+            originalNavigatePrev();
+            logCurrentReview();
+        };
+        //Browse By Category
+         // Multi-Section Category System
+// This allows multiple independent category sections on the same page
+
+class CategorySection {
+    constructor(config) {
+        this.sectionId = config.sectionId;
+        this.data = config.data;
+        this.itemsPerPage = config.itemsPerPage || 4;
+        this.currentPage = 1;
+        this.totalPages = Math.ceil(this.data.length / this.itemsPerPage);
+        this.pageViews = {};
+        
+        this.container = document.getElementById(`${this.sectionId}-container`);
+        this.pagination = document.getElementById(`${this.sectionId}-pagination`);
+        this.viewAllLink = document.getElementById(`${this.sectionId}-viewall`);
+        
+        this.initialize();
+    }
+    
+    initialize() {
+        if (!this.container || !this.pagination) {
+            console.error(`Section elements not found for: ${this.sectionId}`);
+            return;
+        }
+        
+        this.displayCategories();
+        this.createPagination();
+        this.updateViewAllCount();
+        this.setupEventListeners();
+    }
+    
+    displayCategories() {
+        this.container.innerHTML = '';
+        
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+        const currentCategories = this.data.slice(startIndex, endIndex);
+        
+        currentCategories.forEach(category => {
+            const categoryBox = this.createCategoryElement(category);
+            this.container.appendChild(categoryBox);
+        });
+        
+        this.container.classList.add('fade-in');
+        setTimeout(() => {
+            this.container.classList.remove('fade-in');
+        }, 500);
+    }
+    
+    createCategoryElement(category) {
+        const box = document.createElement('div');
+        box.className = 'category-box';
+        box.innerHTML = `
+            <div class="category-image-wrapper">
+                <img src="${category.image}" alt="${category.name}">
+            </div>
+            <div class="category-label">
+                <h3 class="category-title">${category.name}</h3>
+            </div>
+        `;
+        
+        box.addEventListener('click', () => {
+            this.handleCategoryClick(category);
+        });
+        
+        return box;
+    }
+    
+    handleCategoryClick(category) {
+        console.log(`${this.sectionId} - Category clicked: ${category.name}`);
+        this.showNotification(`Opening ${category.name}...`);
+    }
+    
+    createPagination() {
+        this.pagination.innerHTML = '';
+        
+        // Previous button
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'page-nav-btn';
+        prevBtn.innerHTML = '«';
+        prevBtn.disabled = this.currentPage === 1;
+        prevBtn.addEventListener('click', () => this.goToPreviousPage());
+        this.pagination.appendChild(prevBtn);
+        
+        // Page number buttons
+        for (let i = 1; i <= this.totalPages; i++) {
+            const pageBtn = document.createElement('button');
+            pageBtn.className = 'page-number-btn';
+            pageBtn.textContent = i;
+            
+            if (i === this.currentPage) {
+                pageBtn.classList.add('active-page');
+            }
+            
+            pageBtn.addEventListener('click', () => this.goToPage(i));
+            this.pagination.appendChild(pageBtn);
+        }
+        
+        // Next button
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'page-nav-btn';
+        nextBtn.innerHTML = '»';
+        nextBtn.disabled = this.currentPage === this.totalPages;
+        nextBtn.addEventListener('click', () => this.goToNextPage());
+        this.pagination.appendChild(nextBtn);
+    }
+    
+    goToPreviousPage() {
+        if (this.currentPage > 1) {
+            this.currentPage--;
+            this.updateDisplay();
+        }
+    }
+    
+    goToNextPage() {
+        if (this.currentPage < this.totalPages) {
+            this.currentPage++;
+            this.updateDisplay();
+        }
+    }
+    
+    goToPage(pageNumber) {
+        if (pageNumber !== this.currentPage) {
+            this.currentPage = pageNumber;
+            this.pageViews[pageNumber] = (this.pageViews[pageNumber] || 0) + 1;
+            this.updateDisplay();
+        }
+    }
+    
+    updateDisplay() {
+        this.displayCategories();
+        this.createPagination();
+        this.scrollToSection();
+    }
+    
+    scrollToSection() {
+        const sectionElement = document.getElementById(this.sectionId);
+        if (sectionElement) {
+            sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+    
+    updateViewAllCount() {
+        if (this.viewAllLink) {
+            this.viewAllLink.textContent = `View All (${this.data.length})`;
+        }
+    }
+    
+    setupEventListeners() {
+        if (this.viewAllLink) {
+            this.viewAllLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.showNotification(`Showing all ${this.data.length} items`);
+            });
+        }
+    }
+    
+    showNotification(message) {
+        const notification = document.createElement('div');
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            animation: slideInRight 0.3s ease;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        setTimeout(() => {
+            notification.style.animation = 'slideOutRight 0.3s ease';
+            setTimeout(() => {
+                notification.remove();
+            }, 300);
+        }, 2500);
+    }
+}
+
+// Data for Browse By Category section
+const browseCategoryData = [
+    { id: 1, name: "CELEBRANT", image: "images/b1.png" },
+    { id: 2, name: "MAKEUP ARTIST", image: "images/b2.png" },
+    { id: 3, name: "WEDDING VENUE", image: "images/b3.png" },
+    { id: 4, name: "DECORATORS", image: "images/b4.png" },
+    { id: 5, name: "PHOTOGRAPHERS", image: "images/b5.png" },
+    { id: 6, name: "VIDEOGRAPHERS", image: "images/b6.png" },
+    { id: 7, name: "CATERERS", image: "images/b7.png" },
+    { id: 8, name: "FLORISTS", image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400&h=300&fit=crop" },
+    { id: 9, name: "DJ & MUSIC", image: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=400&h=300&fit=crop" },
+    { id: 10, name: "CHOREOGRAPHERS", image: "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=400&h=300&fit=crop" },
+    { id: 11, name: "PLANNERS", image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop" },
+    { id: 12, name: "INVITATION CARDS", image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=300&fit=crop" }
+];
+
+// Data for Popular Venue section
+const popularVenueData = [
+    { id: 1, name: "DESTINATION WEDDINGS", image: "images/b1.png" },
+    { id: 2, name: "HONEYMOON & TRAVEL WEDDING", image: "images/b2.png" },
+    { id: 3, name: "VIDEOGRAPHERS WEDDING", image: "images/b3.png" },
+    { id: 4, name: "CELEBRANT", image: "images/b4.png" },
+    { id: 5, name: "BEACH VENUES", image: "images/b5.png" },
+    { id: 6, name: "GARDEN VENUES", image: "images/b6.png" },
+    { id: 7, name: "BANQUET HALLS", image: "images/b7.png" },
+    { id: 8, name: "HERITAGE VENUES", image: "https://images.unsplash.com/photo-1519167758481-83f29da8ba41?w=400&h=300&fit=crop" },
+    { id: 9, name: "RESORT VENUES", image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop" },
+    { id: 10, name: "FARM VENUES", image: "https://images.unsplash.com/photo-1464047736614-af63643285bf?w=400&h=300&fit=crop" }
+];
+
+// Add animation styles
+const styleSheet = document.createElement('style');
+styleSheet.textContent = `
+    @keyframes slideInRight {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideOutRight {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+    
+    .fade-in {
+        animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+`;
+document.head.appendChild(styleSheet);
+
+// Initialize sections when DOM is ready
+window.addEventListener('DOMContentLoaded', () => {
+    // Initialize Browse By Category section
+    const browseCategorySection = new CategorySection({
+        sectionId: 'browse-category',
+        data: browseCategoryData,
+        itemsPerPage: 4
+    });
+    
+    // Initialize Popular Venue section
+    const popularVenueSection = new CategorySection({
+        sectionId: 'popular-venue',
+        data: popularVenueData,
+        itemsPerPage: 4
+    });
+    
+    console.log('All sections loaded successfully');
+});
+
+//Navbar
+  // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navigationMenu = document.getElementById('navigationMenu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            toggleMobileMenu();
+        });
+
+        function toggleMobileMenu() {
+            navigationMenu.classList.toggle('active');
+            const isOpen = navigationMenu.classList.contains('active');
+            mobileMenuToggle.textContent = isOpen ? '✕' : '☰';
+            console.log(`Mobile menu ${isOpen ? 'opened' : 'closed'}`);
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.top-navbar')) {
+                navigationMenu.classList.remove('active');
+                mobileMenuToggle.textContent = '☰';
+            }
+        });
+
+
+         //Venue 
+                const dropdowns = document.querySelectorAll('[data-dropdown]');
+        
+        dropdowns.forEach(dropdown => {
+            const type = dropdown.getAttribute('data-dropdown');
+            const menu = document.getElementById(type + 'Menu');
+            const arrow = dropdown.nextElementSibling;
+            const items = menu.querySelectorAll('.dropdown-item');
+            
+            dropdown.addEventListener('click', (e) => {
+                e.stopPropagation();
+                
+                document.querySelectorAll('.dropdown-menu').forEach(m => {
+                    if (m !== menu) {
+                        m.classList.remove('active');
+                    }
+                });
+                
+                document.querySelectorAll('.dropdown-arrow').forEach(a => {
+                    if (a !== arrow) {
+                        a.classList.remove('active');
+                    }
+                });
+                
+                menu.classList.toggle('active');
+                arrow.classList.toggle('active');
+            });
+            
+            items.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const value = item.getAttribute('data-value');
+                    const text = item.textContent;
+                    dropdown.textContent = text;
+                    dropdown.style.color = '#333';
+                    menu.classList.remove('active');
+                    arrow.classList.remove('active');
+                });
+            });
+        });
+        
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.classList.remove('active');
+            });
+            document.querySelectorAll('.dropdown-arrow').forEach(arrow => {
+                arrow.classList.remove('active');
+            });
+        });
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
